@@ -1,6 +1,6 @@
 # GCloud QRGen
 
-<div style="text-align:center"
+<div style="text-align:center">
 <img src="https://raw.githubusercontent.com/mikeymop/gcloudqrgen/master/example.png?token=AA6RJGIT26OPNP7UR3TORLS47GP52" width="600">
 </div>
 
