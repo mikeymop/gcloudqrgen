@@ -1,18 +1,24 @@
 # GCloud QRGen
 
-The purpose of this function is to create a QR Code containing a specified url. The size can be specified (default = 1). The resulting QR code is then stored in a specified cloud storage bucket. This is useful for appending the qr to documents with an online link.
+![Example Image](https://raw.githubusercontent.com/mikeymop/gcloudqrgen/master/example.png?token=AA6RJGIT26OPNP7UR3TORLS47GP52)
+
+The purpose of this function is to create a QR Code containing a specified url. The size can be specified (default = 1). The resulting QR code is then displayed on the browsers canvas. 
+
+This is useful for generating QR Codes in an ephemeral manner.
 
 ### Deploying the Function
 
+Because Google Cloud requires function names to be globally unique, you will have to change the function name on line 5. Use that same function name in the deploy command below.
+
 ```
-gcloud --project [Project name] functions deploy qr_gen --runtime python37 --trigger-http --timeout=540
+gcloud --project [Project name] functions deploy [Function Name] --runtime python37 --trigger-http --timeout=540
 ```
 
 ### Calling the Function
 
 This is an example `curl` request.
 ```
-curl -g -X POST [Project URL] -H "Content-Type:application/json" -d '{"output_file":"oqr.png","scale":"10","text":"hello there","result_bucket":"pdfstamp"}'
+https://[region][projecturl].cloudfunctions.net/[Function Name]?text=PythonIsAwesome&scale=10
 ```
 
 ### Testing: Using the venv
