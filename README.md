@@ -18,7 +18,7 @@ gcloud --project [Project name] functions deploy [Function Name] --runtime pytho
 
 ### Calling the Function
 
-This is an example `curl` request.
+This is an example request that stores the text `PythonIsAwesome` in a QR Code.
 ```
 https://[region][projecturl].cloudfunctions.net/[Function Name]?text=PythonIsAwesome&scale=10
 ```
