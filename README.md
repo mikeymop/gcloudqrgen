@@ -1,6 +1,6 @@
 # GCloud QRGen
 
-![Example Image](https://raw.githubusercontent.com/mikeymop/gcloudqrgen/master/example.png?token=AA6RJGIT26OPNP7UR3TORLS47GP52)
+<img src="https://raw.githubusercontent.com/mikeymop/gcloudqrgen/master/example.png?token=AA6RJGIT26OPNP7UR3TORLS47GP52" width="600">
 
 The purpose of this function is to create a QR Code containing a specified url. The size can be specified (default = 1). The resulting QR code is then displayed on the browsers canvas. 
 
