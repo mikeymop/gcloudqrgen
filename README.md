@@ -1,6 +1,6 @@
 # GCloud QRGen
 
-The purpose of this function is to create a QR Code containing a specified url. The size can be specified (default = 1). This is useful for appending the qr to documents with an online link.
+The purpose of this function is to create a QR Code containing a specified url. The size can be specified (default = 1). The resulting QR code is then stored in a specified cloud storage bucket. This is useful for appending the qr to documents with an online link.
 
 ### Deploying the Function
 
