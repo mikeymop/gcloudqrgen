@@ -25,6 +25,8 @@ https://[region][projecturl].cloudfunctions.net/[Function Name]?text=PythonIsAwe
 
 ### Testing: Using the venv
 
+I commented out an argument parser at the end of the program. You can use this to test the function locally in your terminal using `pipenv`.
+
 ```
 pipenv install
 pipenv shell
