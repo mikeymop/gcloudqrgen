@@ -18,6 +18,12 @@ gcloud --project [Project name] functions deploy [Function Name] --runtime pytho
 
 ### Calling the Function
 
+QR Gen accepts three arguments as query string parameters (`*` for required):
+
+* Text*: The text you would like to be encoded.
+* Scale: How much you would like to scale up qr code. 5 and 10 are recommended.
+* bg: The color for the background of the QR Code, leave blank for transparent.
+
 This is an example request that stores the text `PythonIsAwesome` in a QR Code.
 ```
 https://[region][projecturl].cloudfunctions.net/[Function Name]?text=PythonIsAwesome&scale=10
