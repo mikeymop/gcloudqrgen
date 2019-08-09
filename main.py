@@ -15,6 +15,8 @@ def qr_gen(request):
 	if(ext == None):
 		print("Defaulting to png")
 		ext = '.png'
+	if(ext[0] != "."):
+		ext = '.'+ext
 
 	temp_dir = "/tmp" # this is the only writable location in gcloud
 	os.chdir(temp_dir)
@@ -33,15 +35,14 @@ def qr_gen(request):
 
 def mk_qr(ofile, qrsize, text, bg, ext):
 	print(ofile, text)
-	qr = segno.make(str(text))
 	print("Saving qr code as %s" % (ofile))
 	if(ext == 'png'):
+		qr = segno.make(str(text))
 		qr.save(ofile, scale=qrsize, border=2, background=bg)
 	else:
-		img = qr.to_pil(scale=scale, background=background)
+		qr = segno.make_qr(str(text)) # jpg and bmp dont support transparency
+		img = qr.to_pil(scale=qrsize, border=2) # force white bg
 		img.save(ofile)
-
-
 # For testing locally
-ofile, scale, qrtext, background, ext = sys.argv[1:]
-mk_qr(ofile, int(scale), qrtext, background, ext)
+# ofile, scale, qrtext, background, ext = sys.argv[1:]
+# mk_qr(ofile, int(scale), qrtext, background, ext)
