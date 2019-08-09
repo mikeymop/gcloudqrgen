@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 segno = "*"
+segno-pil = "*"
 google-cloud-storage = "*"
 Flask = "*"
 

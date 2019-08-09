@@ -3,3 +3,4 @@ pipfile
 README.md
 .gitignore
 pipfile.lock
+*.png

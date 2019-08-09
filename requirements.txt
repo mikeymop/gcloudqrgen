@@ -1,3 +1,4 @@
 flask
 segno
+segno-pil
 google-cloud-storage
